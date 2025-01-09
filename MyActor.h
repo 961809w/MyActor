@@ -4,6 +4,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "MyActor.generated.h"
+#include <iostream>
 
 UCLASS()
 class MYMY_API AMyActor : public AActor
@@ -23,12 +24,18 @@ public:
     virtual void Tick(float DeltaTime) override;
 
 private:
-    // Current position of the actor
+	//현재 위치
     FVector2D CurrentPosition;
 
-    // Step counter
+	//현재 위치에서 움직인 횟수
     int32 StepCount;
 
-    // Function to perform random movement
+	//랜덤하게 움직이는 함수
     void MoveRandomly();
+
+	//확률에 따라 이벤트를 발생시키는 함수
+	void TriggerEventWithProbability(float Probability);
+
+	//두 점 사이의 거리를 계산하는 함수
+	float distance(FVector2D a, FVector2D b);
 };
