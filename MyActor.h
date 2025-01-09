@@ -4,7 +4,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
 #include "MyActor.generated.h"
-#include <iostream>
+
 
 UCLASS()
 class MYMY_API AMyActor : public AActor
